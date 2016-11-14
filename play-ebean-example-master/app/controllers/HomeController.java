@@ -88,6 +88,9 @@ public class HomeController  extends Controller {
                 savedComputer.discontinued = newComputerData.discontinued;
                 savedComputer.introduced = newComputerData.introduced;
                 savedComputer.name = newComputerData.name;
+                savedComputer.memoriaRam = newComputerData.memoriaRam;
+                
+                
 
                 savedComputer.update();
                 flash("success", "Computer " + computerForm.get().name + " has been updated");
