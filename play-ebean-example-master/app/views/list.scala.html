@@ -71,6 +71,7 @@
                     @header("introduced", "Introduced")
                     @header("discontinued", "Discontinued")
                     @header("company.name", "Company")
+                    @header("hadware.name", "Hadware")
                 </tr>
             </thead>
             <tbody>
@@ -97,6 +98,13 @@
                                 <em>-</em>
                             } else {
                                 @computer.company.name
+                            }
+                        </td>
+                        <td>
+                            @if(computer.hadware == null) {
+                                <em>-</em>
+                            } else {
+                                @computer.hadware.name
                             }
                         </td>
                     </tr>
