@@ -3,17 +3,16 @@ package models;
 import java.util.*;
 import javax.persistence.*;
 
-import com.avaje.ebean.Model;
-import play.data.format.*;
+import play.db.ebean.*;
 import play.data.validation.*;
 
-import com.avaje.ebean.*;
+
 
 /**
- * Computer entity managed by Ebean
+ * Procesador entity managed by Ebean
  */
 @Entity 
-public class Procesador extends Model {
+public class Procesador extends com.avaje.ebean.Model {
 
     private static final long serialVersionUID = 1L;
 
@@ -23,37 +22,18 @@ public class Procesador extends Model {
     @Constraints.Required
     public String name;
     
-    @Formats.DateTime(pattern="yyyy-MM-dd")
-    public Date introduced;
-    
-    @Formats.DateTime(pattern="yyyy-MM-dd")
-    public Date discontinued;
-    
-    @ManyToOne
-    public Company company;
-    
     /**
-     * Generic query helper for entity Computer with id Long
+     * Generic query helper for entity Company with id Long
      */
-    public static Find<Long,Computer> find = new Find<Long,Computer>(){};
-    
-    /**
-     * Return a paged list of computer
-     *
-     * @param page Page to display
-     * @param pageSize Number of computers per page
-     * @param sortBy Computer property used for sorting
-     * @param order Sort order (either or asc or desc)
-     * @param filter Filter applied on the name column
-     */
-    public static PagedList<Computer> page(int page, int pageSize, String sortBy, String order, String filter) {
-        return
-            find.where()
-                .ilike("name", "%" + filter + "%")
-                .orderBy(sortBy + " " + order)
-                .fetch("company")
-                .findPagedList(page, pageSize);
+    public static Find<Long,Procesador> find = new Find<Long,Procesador>(){};
+
+    public static Map<String,String> options() {
+        LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
+        for(Procesador c: Procesador.find.orderBy("name").findList()) {
+            options.put(c.id.toString(), c.name);
+        }
+        return options;
     }
-    
+
 }
 
