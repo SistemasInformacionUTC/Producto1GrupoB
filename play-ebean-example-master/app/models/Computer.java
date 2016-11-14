@@ -31,6 +31,7 @@ public class Computer extends Model {
     
     @ManyToOne
     public Company company;
+    @ManyToOne
     public Procesador procesador;
     
     /**
@@ -55,7 +56,9 @@ public class Computer extends Model {
                 .fetch("company")
                 .fetch("procesador")
                 .findPagedList(page, pageSize);
+        
     }
+    
     
 }
 
