@@ -26,7 +26,4 @@ public TrarjetaMadre(long id, int precio, String modelo, int cantidad) {
 		this.cantidad = cantidad;
 	}
 	
-	
-	
-	
 }

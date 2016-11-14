@@ -4,13 +4,17 @@
 
 # Default path will just redirect to the computer list
 GET     /                           controllers.HomeController.index()
+GET     /                           controllers.TarjetaController.index()
 
 # Computers list (look at the default values for pagination parameters)
 GET     /computers                  controllers.HomeController.list(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+GET     /computers                  controllers.TarjetaController.list(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
 
 # Add computer
 GET     /computers/new              controllers.HomeController.create()
+GET     /computers/new		             controllers.TarjetaController.create()
 POST    /computers                  controllers.HomeController.save()
+POST    /computers                  controllers.TarjetaController.save()
 
 # Edit existing computer
 GET     /computers/:id              controllers.HomeController.edit(id:Long)
