@@ -53,6 +53,21 @@
         </form>
         
         <a class="btn success" id="add" href="@routes.HomeController.create()">Add a new computer</a>
+
+        
+        
+    </div>
+    
+      <div id="actions">
+        
+        <form action="@link(0, "name")" method="GET">
+            <input type="search" id="searchbox" name="f" value="@currentFilter" placeholder="Buscarf por el nombre...">
+            <input type="submit" id="searchsubmit" value="Buscar por el nombre la Tarjeta" class="btn primary">
+        </form>
+        
+        <a class="btn success" id="add" href="@routes.TarjetaController.create()">Anadir nueva Tarjeta Madre</a>
+
+        
         
     </div>
     
@@ -71,6 +86,9 @@
                     @header("introduced", "Introduced")
                     @header("discontinued", "Discontinued")
                     @header("company.name", "Company")
+                    @header("company.name", "Tarjeta Madre")
+                    @header("company.name", "Precio")
+                    @header("company.name", "Tarjeta Cantidad")
                 </tr>
             </thead>
             <tbody>

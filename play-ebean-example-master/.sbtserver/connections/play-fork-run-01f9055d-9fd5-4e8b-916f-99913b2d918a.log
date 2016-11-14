@@ -1,0 +1,9 @@
+New log file opened at Mon Nov 14 08:40:41 COT 2016 by 7468@DESKTOP-GTDL5IE
+Sending msg to client play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\proyectosp\Producto1GrupoB\play-ebean-example-master\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\proyectosp\Producto1GrupoB\play-ebean-example-master\.sbtserver\master.log))
+Sending msg to client play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\proyectosp\Producto1GrupoB\play-ebean-example-master\.sbtserver\connections\play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a.log))
+Reading next message from client.
+Client play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a closed, java.net.SocketException: Connection reset, shutting down
+Stopping client.
+Client play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a thread exiting.
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a
