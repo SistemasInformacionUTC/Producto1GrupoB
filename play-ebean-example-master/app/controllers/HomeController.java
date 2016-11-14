@@ -85,6 +85,7 @@ public class HomeController  extends Controller {
             if (savedComputer != null) {
                 Computer newComputerData = computerForm.get();
                 savedComputer.company = newComputerData.company;
+                savedComputer.procesador = newComputerData.procesador;
                 savedComputer.discontinued = newComputerData.discontinued;
                 savedComputer.introduced = newComputerData.introduced;
                 savedComputer.name = newComputerData.name;

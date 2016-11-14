@@ -31,6 +31,8 @@ public class Computer extends Model {
     
     @ManyToOne
     public Company company;
+    @ManyToOne
+    public Procesador procesador;
     
     /**
      * Generic query helper for entity Computer with id Long
@@ -52,8 +54,11 @@ public class Computer extends Model {
                 .ilike("name", "%" + filter + "%")
                 .orderBy(sortBy + " " + order)
                 .fetch("company")
+                .fetch("procesador")
                 .findPagedList(page, pageSize);
+        
     }
+    
     
 }
 
