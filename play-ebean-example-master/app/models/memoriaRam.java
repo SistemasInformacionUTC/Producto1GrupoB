@@ -32,7 +32,7 @@ public class memoriaRam extends com.avaje.ebean.Model {
 
     public static Map<String,String> options() {
         LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
-        for(Company c: Company.find.orderBy("name").findList()) {
+        for(memoriaRam c: memoriaRam.find.orderBy("name").findList()) {
             options.put(c.id.toString(), c.name);
         }
         return options;
