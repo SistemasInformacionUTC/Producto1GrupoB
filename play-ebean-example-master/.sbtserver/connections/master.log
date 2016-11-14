@@ -1,0 +1,54 @@
+New log file opened at Mon Nov 14 08:39:00 COT 2016 by 7468@DESKTOP-GTDL5IE
+Taking next connection to: 65166
+New client attempting to connect on port: 65249-65166
+  Address = /169.254.127.165:65166
+Handshake exception on socket: 65249
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 65166
+New client attempting to connect on port: 65250-65166
+  Address = /169.254.127.165:65166
+This client on port 65250 has uuid 59fcde64-6ca9-4721-aa64-3c8a6bbbaa82 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-59fcde64-6ca9-4721-aa64-3c8a6bbbaa82
+Taking next connection to: 65166
+New client attempting to connect on port: 49190-65166
+  Address = /169.254.127.165:65166
+Handshake exception on socket: 49190
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 65166
+New client attempting to connect on port: 49191-65166
+  Address = /169.254.127.165:65166
+This client on port 49191 has uuid 01f9055d-9fd5-4e8b-916f-99913b2d918a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-01f9055d-9fd5-4e8b-916f-99913b2d918a
+Taking next connection to: 65166
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 7468@DESKTOP-GTDL5IE logs at Mon Nov 14 08:43:41 COT 2016, goodbye.
