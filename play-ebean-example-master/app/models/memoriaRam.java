@@ -28,7 +28,7 @@ public class memoriaRam extends com.avaje.ebean.Model {
     /**
      * Generic query helper for entity memoriaRam with id Long
      */
-    public static Find<Long,Company> find = new Find<Long,Company>(){};
+    public static Find<Long,memoriaRam> find = new Find<Long,memoriaRam>(){};
 
     public static Map<String,String> options() {
         LinkedHashMap<String,String> options = new LinkedHashMap<String,String>();
